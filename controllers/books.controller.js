@@ -74,13 +74,13 @@ async function addBook(req, res) {
   const { title, author, genre } = req.body;
 
   if (!title) {
-    return res.status(400).send('Please fill in the title');
+    return res.status(400).json('Please fill in the title');
   }
   if (!author){
-    return res.status(400).send('missing author');
+    return res.status(400).json('missing author');
   }
   if (!genre) {
-    return res.status(400).send('missing genre');
+    return res.status(400).json('missing genre');
   }
   const createdBook = {title, author, genre};
 
